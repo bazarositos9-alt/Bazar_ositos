@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Pequeño Bazar | Ropa para bebé</title>
+  <link rel="stylesheet" href="estilos.css">
+  <!-- SDK de PayPal en Pesos Mexicanos -->
+  <script src="https://www.paypal.com/sdk/js?client-id=sb¤cy=MXN"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- BANNER PRINCIPAL RESPONSIVO -->
+  <header class="banner">
+    <div class="banner-contenedor">
+      <img src="imagenes/banner.jpg.jpeg" alt="Banner de Mi Pequeño Bazar">
+    </div>
+  </header>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <nav class="barra">
+    <button id="hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">☰</button>
+    <span>Bazar de Ositos</span>
+  </nav>
+
+  <!-- MENÚ DESPLEGABLE -->
+  <div id="menu" class="menu">
+    <button data-pagina="inicio">⌂ Inicio</button>
+    <button data-pagina="nina">🌸 Ropa de niña</button>
+    <button data-pagina="nino">🧸 Ropa de niño</button>
+    <button data-pagina="accesorios">🎀 Accesorios</button>
+  </div>
+
+  <main>
+
+    <!-- PÁGINA DE INICIO -->
+    <section id="inicio" class="pagina activa">
+      <div class="inicio-contenido">
+        <div class="logo-contenedor">
+          <img src="imagenes/logo.png.jpeg" alt="Logotipo de Mi Pequeño Bazar">
+        </div>
+
+        <h1>Bienvenidos a nuestro bazar</h1>
+        <p class="subtitulo">
+          Pequeñas prendas, grandes sonrisas. Descubre nuestra colección.
+        </p>
+
+        <div class="botones-categorias">
+          <button class="boton-categoria boton-nina" data-pagina="nina">
+            <span>🌸 ROPA DE NIÑA</span><span>❯</span>
+          </button>
+          <button class="boton-categoria boton-nino" data-pagina="nino">
+            <span>🧸 ROPA DE NIÑO</span><span>❯</span>
+          </button>
+          <button class="boton-categoria boton-accesorios" data-pagina="accesorios">
+            <span>🎀 ACCESORIOS</span><span>❯</span>
+          </button>
+        </div>
+
+        <div class="promocion">
+          <strong>¡BIENVENIDOS!</strong>
+          <p>Ropita y accesorios para tu bebé</p>
+          <small>Explora nuestras colecciones</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROPA DE NIÑA (10 OPCIONES) -->
+    <section id="nina" class="pagina galeria">
+      <h2>🌸 Ropa de niña</h2>
+      <p>Prendas llenas de ternura para cada ocasión.</p>
+
+      <div class="catalogo-carrusel">
+        <!-- PRENDA 1 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/niña1.png.jpeg" alt="Vestido floral">
+          <div class="detalles-producto">
+            <h3>Conjunto floral para niña</h3>
+            <div class="precio-producto" data-precio="150">$320.00 MXN</div>
+            <p><strong>Talla:</strong> 5 años</p>
+            <p><strong>Color:</strong> Café</p>
+            <p><strong>Estado:Nuevo</strong></p>
+            <p class="descripcion-producto">Conjunto blusa floral y falda tela tipo pana.</p>
+          </div>
+        </article>
+        <!-- PRENDA 2 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/niña2.png.jpeg" alt="Pants niña">
+          <div class="detalles-producto">
+            <h3>Conjunto con pantalon de mezclilla rosa</h3>
+            <div class="precio-producto" data-precio="100">$350.00 MXN</div>
+            <p><strong>Talla: 5 años</strong></p>
+            <p><strong>Color: Blanco/Rosa</strong></p>
+            <p><strong>Estado: Nuevo</strong></p>
+            <p class="descripcion-producto">Conjunto de dos piezas con pantalon de mezclilla tipo pana</p>
+          </div>
+        </article>
+        <!-- PRENDA 3 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/niña3.png.jpeg" alt="Mameluco niña">
+          <div class="detalles-producto">
+            <h3>Vestido pumpink color café</h3>
+            <div class="precio-producto" data-precio="130">$240.00 MXN</div>
+            <p><strong>Talla: 4 años</strong></p>
+            <p><strong>Color: Café</strong></p>
+            <p><strong>Estado: Nuevo</strong></p>
+            <p class="descripcion-producto">Vestido comodo para niña estilo dia de muertos</p>
+          </div>
+        </article>
+        <!-- PRENDA 4 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/niña4.png.jpeg" alt="Prenda 4">
+          <div class="detalles-producto">
+            <h3>Conjunto con falda tipo pana</h3>
+            <div class="precio-producto" data-precio="100">$370.00 MXN</div>
+            <p><strong>Talla: 5 años</strong></p>
+            <p><strong>Color: Amarillo/Negro</strong></p>
+            <p><strong>Estado: Nuevo</strong></p>
+            <p class="descripcion-producto">Conjunto comodo estilo primavera con falda tipo pana</p>
+          </div>
+        </article>
+        <!-- PRENDA 5 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/niña5.png.jpeg" alt="Prenda 5">
+          <div class="detalles-producto">
+            <h3>Cargo noche estrellada</h3>
+            <div class="precio-producto" data-precio="100">$320.00 MXN</div>
+            <p><strong>Talla: 7 años</strong></p>
+            <p><strong>Color: Lila</strong></p>
+            <p><strong>Estado: Nuevo</strong></p>
+            <p class="descripcion-producto">Cargo color lila acolchado.</p>
+          </div>
+        </article>
+        <!-- PRENDA 6 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/niña6.png.jpeg" alt="Prenda 6">
+          <div class="detalles-producto">
+            <h3>Conjunto comodo juicy florado</h3>
+            <div class="precio-producto" data-precio="100">$530.00 MXN</div>
+            <p><strong>Talla: 6 años</strong></p>
+            <p><strong>Color: Crema</strong></p>
+            <p><strong>Estado:Nuevo</strong></p>
+            <p class="descripcion-producto">Conjunto comodo para niña</p>
+          </div>
+        </article>
+        <!-- PRENDA 7 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/niña7.png.jpeg" alt="Prenda 7">
+          <div class="detalles-producto">
+            <h3>Enterizo floral fresco</h3>
+            <div class="precio-producto" data-precio="100">$270.00 MXN</div>
+            <p><strong>Talla: 6 años</strong></p>
+            <p><strong>Color: Azul florado</strong></p>
+            <p><strong>Estado: Nuevo</strong></p>
+            <p class="descripcion-producto">Enterizo fresco y comodo para niña</p>
+          </div>
+        </article>
+        <!-- PRENDA 8 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/niña8.png.jpeg" alt="Prenda 8">
+          <div class="detalles-producto">
+            <h3>Pantalon de pana cafe con blusa afrutada</h3>
+            <div class="precio-producto" data-precio="100">$275.00 MXN</div>
+            <p><strong>Talla: 6 años</strong></p>
+            <p><strong>Color: Cafe/azul </strong></p>
+            <p><strong>Estado: Nuevo</strong></p>
+            <p class="descripcion-producto">Conjunto primaveral para niña</p>
+          </div>
+        </article>
+        <!-- PRENDA 9 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/niña9.png.jpeg" alt="Prenda 9">
+          <div class="detalles-producto">
+            <h3>Mameluco comodo estilo perritos</h3>
+            <div class="precio-producto" data-precio="100">$140.00 MXN</div>
+            <p><strong>Talla: 4 años</strong></p>
+            <p><strong>Color: Azul oscuro</strong></p>
+            <p><strong>Estado: Nuevo</strong></p>
+            <p class="descripcion-producto">Mameluco comodo para niña</p>
+          </div>
+        </article>
+        <!-- PRENDA 10 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/niña10.png.jpeg" alt="Prenda 10">
+          <div class="detalles-producto">
+            <h3>Prenda de niña 10</h3>
+            <div class="precio-producto" data-precio="100">$100.00 MXN</div>
+            <p><strong>Talla:</strong> Por definir</p>
+            <p><strong>Color:</strong> Por definir</p>
+            <p><strong>Estado:</strong> Por definir</p>
+            <p class="descripcion-producto">Escribe aquí la descripción.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="controles-carrusel">
+        <button class="anterior">❮ Anterior</button>
+        <span class="contador-fotos"></span>
+        <button class="siguiente">Siguiente ❯</button>
+      </div>
+
+      <button class="regresar" data-pagina="inicio">← Volver al inicio</button>
+    </section>
+
+    <!-- ROPA DE NIÑO (10 OPCIONES) -->
+    <section id="nino" class="pagina galeria">
+      <h2>🧸 Ropa de niño</h2>
+      <p>Comodidad y estilo para sus aventuras.</p>
+
+      <div class="catalogo-carrusel">
+        <!-- PRENDA 1 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/niño1.png.jpeg" alt="Conjunto niño">
+          <div class="detalles-producto">
+            <h3>Conjunto para niño</h3>
+            <div class="precio-producto" data-precio="475">$475.00 MXN</div>
+            <p><strong>Talla:</strong> 5 años</p>
+            <p><strong>Color:</strong> Azul y rojo</p>
+            <p><strong>Estado:</strong> Nuevo</p>
+            <p class="descripcion-producto">Conjunto cómodo de dos piezas.</p>
+          </div>
+        </article>
+        <!-- PRENDA 2 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/niño2.png.jpeg" alt="Playera niño">
+          <div class="detalles-producto">
+            <h3>Playera termosellada "So fly"</h3>
+            <div class="precio-producto" data-precio="230">$230.00 MXN</div>
+            <p><strong>Talla:</strong> 4 años</p>
+            <p><strong>Color:</strong> Azul</p>
+            <p><strong>Estado:</strong> Nuevo</p>
+            <p class="descripcion-producto">Playera suave para uso diario.</p>
+          </div>
+        </article>
+        <!-- PRENDA 3 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/niño3.png.jpeg" alt="Conjunto True Religion">
+          <div class="detalles-producto">
+            <h3>Conjunto "True Religion"</h3>
+            <div class="precio-producto" data-precio="475">$475.00 MXN</div>
+            <p><strong>Talla:</strong> 5 años</p>
+            <p><strong>Color:</strong> Café oscuro</p>
+            <p><strong>Estado:</strong> Nuevo</p>
+            <p class="descripcion-producto">Playera y pantalón de mezclilla.</p>
+          </div>
+        </article>
+        <!-- PRENDA 4 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/niño4.png.jpeg" alt="Sudadera pato">
+          <div class="detalles-producto">
+            <h3>Sudadera pato con rayas</h3>
+            <div class="precio-producto" data-precio="275">$275.00 MXN</div>
+            <p><strong>Talla:</strong> 3 años</p>
+            <p><strong>Color:</strong> Blanco/Azul</p>
+            <p><strong>Estado:</strong> Nuevo</p>
+            <p class="descripcion-producto">Sudadera con capucha para todos los días.</p>
+          </div>
+        </article>
+        <!-- PRENDA 5 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/niño5.png.jpeg" alt="Sudadera cuadros">
+          <div class="detalles-producto">
+            <h3>Sudadera con capucha cuadros</h3>
+            <div class="precio-producto" data-precio="310">$310.00 MXN</div>
+            <p><strong>Talla:</strong> 5 años</p>
+            <p><strong>Color:</strong> Gris oxford</p>
+            <p><strong>Estado:</strong> Nuevo</p>
+            <p class="descripcion-producto">Sudadera cómoda para todos los días.</p>
+          </div>
+        </article>
+        <!-- PRENDA 6 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/niño6.png.jpeg" alt="Peto mezclilla">
+          <div class="detalles-producto">
+            <h3>Peto de mezclilla</h3>
+            <div class="precio-producto" data-precio="245">$245.00 MXN</div>
+            <p><strong>Talla:</strong> 3 años</p>
+            <p><strong>Color:</strong> Café claro</p>
+            <p><strong>Estado:</strong> Nuevo</p>
+            <p class="descripcion-producto">Peto con broches ajustables.</p>
+          </div>
+        </article>
+        <!-- PRENDA 7 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/niño7.png.jpeg" alt="Conjunto pana">
+          <div class="detalles-producto">
+            <h3>Conjunto de pana</h3>
+            <div class="precio-producto" data-precio="510">$510.00 MXN</div>
+            <p><strong>Talla:</strong> 6 años</p>
+            <p><strong>Color:</strong> Verde olivo</p>
+            <p><strong>Estado:</strong> Nuevo</p>
+            <p class="descripcion-producto">Conjunto de sobrecamisa y pants cómodo.</p>
+          </div>
+        </article>
+        <!-- PRENDA 8 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/niño8.png.jpeg" alt="Sobrecamisa">
+          <div class="detalles-producto">
+            <h3>Sobrecamisa de cuadros</h3>
+            <div class="precio-producto" data-precio="265">$265.00 MXN</div>
+            <p><strong>Talla:</strong> 5 años</p>
+            <p><strong>Color:</strong> Rojo/Blanco</p>
+            <p><strong>Estado:</strong> Nuevo</p>
+            <p class="descripcion-producto">Sobrecamisa de cuadros moderna.</p>
+          </div>
+        </article>
+        <!-- PRENDA 9 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/niño9.png.jpeg" alt="Abrigo paño">
+          <div class="detalles-producto">
+            <h3>Abrigo de paño doble vista</h3>
+            <div class="precio-producto" data-precio="570">$570.00 MXN</div>
+            <p><strong>Talla:</strong> 3 años</p>
+            <p><strong>Color:</strong> Gris oscuro</p>
+            <p><strong>Estado:</strong> Nuevo</p>
+            <p class="descripcion-producto">Abrigo casual para eventos semiformales.</p>
+          </div>
+        </article>
+        <!-- PRENDA 10 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/niño10.png.jpeg" alt="Peto completo">
+          <div class="detalles-producto">
+            <h3>Peto completo de mezclilla</h3>
+            <div class="precio-producto" data-precio="470">$470.00 MXN</div>
+            <p><strong>Talla:</strong> 7 años</p>
+            <p><strong>Color:</strong> Azul celeste</p>
+            <p><strong>Estado:</strong> Nuevo</p>
+            <p class="descripcion-producto">Peto de mezclilla ligera y stretch moderno.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="controles-carrusel">
+        <button class="anterior">❮ Anterior</button>
+        <span class="contador-fotos"></span>
+        <button class="siguiente">Siguiente ❯</button>
+      </div>
+
+      <button class="regresar" data-pagina="inicio">← Volver al inicio</button>
+    </section>
+
+    <!-- ACCESORIOS (10 OPCIONES) -->
+    <section id="accesorios" class="pagina galeria">
+      <h2>🎀 Accesorios</h2>
+      <p>Pequeños detalles para grandes momentos.</p>
+
+      <div class="catalogo-carrusel">
+        <!-- ACCESORIO 1 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/Accesorio1.png.jpeg" alt="Termo">
+          <div class="detalles-producto">
+            <h3>Termo personalizado</h3>
+            <div class="precio-producto" data-precio="115">$115.00 MXN</div>
+            <p><strong>Talla:</strong> 950 ml.</p>
+            <p><strong>Color:</strong> Beige</p>
+            <p><strong>Estado:</strong> Nuevo</p>
+            <p class="descripcion-producto">Termo práctico y resistente.</p>
+          </div>
+        </article>
+        <!-- ACCESORIO 2 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/Accesorio2.png.jpeg" alt="Mochila">
+          <div class="detalles-producto">
+            <h3>Mochila logotipo "Bazar de Ositos"</h3>
+            <div class="precio-producto" data-precio="700">$700.00 MXN</div>
+            <p><strong>Talla:</strong> Única</p>
+            <p><strong>Color:</strong> Beige</p>
+            <p><strong>Estado:</strong> Nuevo</p>
+            <p class="descripcion-producto">Mochila cómoda y amplia.</p>
+          </div>
+        </article>
+        <!-- ACCESORIO 3 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/Accesorio3.png.jpeg" alt="ToteBagg">
+          <div class="detalles-producto">
+            <h3>ToteBagg logotipo "Bazar de Ositos"</h3>
+            <div class="precio-producto" data-precio="375">$375.00 MXN</div>
+            <p><strong>Talla:</strong> Única</p>
+            <p><strong>Color:</strong> Beige</p>
+            <p><strong>Estado:</strong> Nuevo</p>
+            <p class="descripcion-producto">Bolsa de manta resistente.</p>
+          </div>
+        </article>
+        <!-- ACCESORIO 4 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/Accesorio4.png.jpeg" alt="Bufanda azul">
+          <div class="detalles-producto">
+            <h3>Bufanda para niño color azul. Charm Osito</h3>
+            <div class="precio-producto" data-precio="120">$120.00 MXN</div>
+            <p><strong>Talla:</strong> 90 cm</p>
+            <p><strong>Color:</strong> Azul</p>
+            <p><strong>Estado:</strong> Nuevo</p>
+            <p class="descripcion-producto">Escribe aquí la descripción.</p>
+          </div>
+        </article>
+        <!-- ACCESORIO 5 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/Accesorio5.png.jpeg" alt="Guantes azul">
+          <div class="detalles-producto">
+            <h3>Guantes para niño color azul charm osito</h3>
+            <div class="precio-producto" data-precio="65">$65.00 MXN</div>
+            <p><strong>Talla:</strong> Unitalla</p>
+            <p><strong>Color:</strong> Azul</p>
+            <p><strong>Estado:</strong> Nuevo</p>
+            <p class="descripcion-producto">Escribe aquí la descripción.</p>
+          </div>
+        </article>
+        <!-- ACCESORIO 6 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/Accesorio6.png.jpeg" alt="Guantes rosa">
+          <div class="detalles-producto">
+            <h3>Guantes para niña color rosa charm osito</h3>
+            <div class="precio-producto" data-precio="65">$65.00 MXN</div>
+            <p><strong>Talla:</strong> Unitalla</p>
+            <p><strong>Color:</strong> Rosa</p>
+            <p><strong>Estado:</strong> Nuevo</p>
+            <p class="descripcion-producto">Escribe aquí la descripción.</p>
+          </div>
+        </article>
+        <!-- ACCESORIO 7 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/Accesorio7.png.jpeg" alt="Bufanda rosa">
+          <div class="detalles-producto">
+            <h3>Bufanda para niña color rosa charm osito</h3>
+            <div class="precio-producto" data-precio="120">$120.00 MXN</div>
+            <p><strong>Talla:</strong> 90 cm</p>
+            <p><strong>Color:</strong> Rosa</p>
+            <p><strong>Estado:</strong> Nuevo</p>
+            <p class="descripcion-producto">Escribe aquí la descripción.</p>
+          </div>
+        </article>
+        <!-- ACCESORIO 8 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/Accesorio8.png.jpeg" alt="Calcetas rosa">
+          <div class="detalles-producto">
+            <h3>Calcetas para niña color rosa charm osito</h3>
+            <div class="precio-producto" data-precio="65">$65.00 MXN</div>
+            <p><strong>Talla:</strong> Unitalla</p>
+            <p><strong>Color:</strong> Rosa</p>
+            <p><strong>Estado:</strong> Nuevo</p>
+            <p class="descripcion-producto">Escribe aquí la descripción.</p>
+          </div>
+        </article>
+        <!-- ACCESORIO 9 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/Accesorio9.png.jpeg" alt="Calcetas azul">
+          <div class="detalles-producto">
+            <h3>Calcetas color azul para niño charm osito</h3>
+            <div class="precio-producto" data-precio="65">$65.00 MXN</div>
+            <p><strong>Talla:</strong> Unitalla</p>
+            <p><strong>Color:</strong> Azul</p>
+            <p><strong>Estado:</strong> Nuevo</p>
+            <p class="descripcion-producto">Escribe aquí la descripción.</p>
+          </div>
+        </article>
+        <!-- ACCESORIO 10 -->
+        <article class="ficha-producto">
+          <img class="foto-producto" src="imagenes/Accesorio10.png.jpeg" alt="Tenis">
+          <div class="detalles-producto">
+            <h3>Tenis para niño edición limitada Bzr osito</h3>
+            <div class="precio-producto" data-precio="750">$750.00 MXN</div>
+            <p><strong>Talla:</strong> 20 al 25</p>
+            <p><strong>Color:</strong> Blanco/Beige</p>
+            <p><strong>Estado:</strong> Nuevo</p>
+            <p class="descripcion-producto">Escribe aquí la descripción.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="controles-carrusel">
+        <button class="anterior">❮ Anterior</button>
+        <span class="contador-fotos"></span>
+        <button class="siguiente">Siguiente ❯</button>
+      </div>
+
+      <button class="regresar" data-pagina="inicio">← Volver al inicio</button>
+    </section>
+
+  </main>
+
+  <!-- BOTÓN FLOTANTE DE CANASTA DE COMPRAS -->
+  <button id="btn-carrito-flotante" class="boton-canasta-flotante" aria-label="Abrir canasta de compras" title="Ver mi canasta">
+    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <path d="M16 10a4 4 0 0 1-8 0"></path>
+    </svg>
+    <span id="contador-carrito" class="badge-canasta">0</span>
+  </button>
+
+  <!-- VENTANA MODAL DEL CARRITO DE COMPRAS -->
+  <div id="modal-carrito" class="cart-modal">
+    <div class="cart-modal-content">
+      <span class="close-cart" id="cerrar-modal">×</span>
+      <h2>🛍️ Tu Canasta de Compra</h2>
+      
+      <div id="lista-items-carrito" class="cart-items-list">
+        <p class="empty-cart-msg">Tu canasta está vacía</p>
+      </div>
+
+      <div class="cart-summary">
+        <div class="cart-total-row">
+          <span>Total a Pagar:</span>
+          <span id="carrito-total-precio">$0.00 MXN</span>
+        </div>
+
+        <button id="btn-vaciar-carrito" class="btn-vaciar">Vaciar Canasta</button>
+        
+        <!-- Botón de Pedido por WhatsApp -->
+        <button id="btn-whatsapp-pedido" class="btn-whatsapp">💬 Pagar por WhatsApp</button>
+
+        <div class="separador-pago"><span>o paga con tarjeta / cuenta</span></div>
+
+        <!-- Botón de pago con PayPal -->
+        <div id="paypal-button-container"></div>
+        <button id="btn-paypal-respaldo" class="btn-paypal-directo" style="display: none;">
+          <span style="font-style: italic; font-weight: 900;">Pay</span><span style="font-style: italic; font-weight: 900; color: #0079C1;">Pal</span> Pagar ahora
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PIE DE PÁGINA CON ICONOS VIVOS -->
+  <footer>
+    <h2>Bazar de Ositos</h2>
+    <p>Síguenos en nuestras redes sociales</p>
+    
+    <div class="redes-sociales">
+      <!-- WhatsApp -->
+      <a href="https://wa.me/5215529954235?text=Hola,%20vengo%20de%20su%20bazar%20y%20quiero%20más%20información" target="_blank" class="icono-social whatsapp" aria-label="WhatsApp" title="Contáctanos por WhatsApp">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-2.972-1.485-4.925-2.668-6.891-6.096-.15-.259-.016-.4.126-.535.13-.13.297-.347.446-.521.15-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      </a>
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/share/1GCtZEQMf3/?mibextid=wwXIfr" target="_blank" class="icono-social facebook" aria-label="Facebook" title="Visita nuestro Facebook">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+      </a>
+      <!-- Instagram -->
+      <a href="https://instagram.com" target="_blank" class="icono-social instagram" aria-label="Instagram" title="Visita nuestro Instagram">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+    </div>
+
+    <div class="footer-links-secciones">
+      <button data-modal="modal-quienes-somos">¿Quiénes somos?</button>
+      <button data-modal="modal-aviso-privacidad">Aviso de privacidad</button>
+      <button data-modal="modal-terminos">Términos y condiciones</button>
+    </div>
+    <p class="derechos">© <span id="anio">2026 Bazar de Ositos</span></p>
+  </footer>
+
+  <!-- =========================================
+       MODALES DE INFORMACIÓN
+  ========================================= -->
+
+  <!-- Modal: ¿Quiénes somos? -->
+  <div id="modal-quienes-somos" class="info-modal-overlay">
+    <div class="info-modal-content">
+      <div class="info-modal-header">
+        <div class="info-modal-title">
+          <svg class="info-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+          </svg>
+          <h2>¿Quiénes somos?</h2>
+        </div>
+        <button class="close-info-modal">×</button>
+      </div>
+      <div class="info-modal-body">
+        <h3>Nuestra Historia</h3>
+        <p>Bazar de Ositos nació en el corazón de una relación que decidió emprender ante los retos universitarios y economicos presentados en 2023. Fue un inicio difícil, pero gracias a la perseverancia y al cariño con el que entregamos cada prenda, el negocio ha crecido y se ha consolidado hasta el día de hoy.</p>
+        
+        <h3>Nuestra Filosofía</h3>
+        <p>Tenemos claro que no solo vendemos ropa para niños y niñas, sino brindamos una opción más economica frente a la industria con precios altamente desproporcionados, nuestra idea es poder llegar a más hogares en el futuro.</p>
+        
+        <h3>Nuestra Visión de Futuro</h3>
+        <p>Miramos hacia adelante con entusiasmo: en unos años nos visualizamos como un negocio totalmente establecido y, más adelante, convertiremos a Bazar de Ositos en una tienda departamental con fuerte presencia en el sur de la Ciudad de México.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Aviso de privacidad -->
+  <div id="modal-aviso-privacidad" class="info-modal-overlay">
+    <div class="info-modal-content">
+      <div class="info-modal-header">
+        <div class="info-modal-title">
+          <svg class="info-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9z"/>
+          </svg>
+          <h2>Aviso de privacidad</h2>
+        </div>
+        <button class="close-info-modal">×</button>
+      </div>
+      <div class="info-modal-body">
+        <p class="modal-doc-title"><strong>AVISO DE PRIVACIDAD INTEGRAL</strong></p>
+        <p><strong>Bazar de Ositos</strong> — Tienda virtual de ropa para niños y niñas<br>
+        <strong>Última fecha de revisión:</strong> 13 de noviembre de 2026.</p>
+
+        <h3>1. Identidad y domicilio del responsable</h3>
+        <p>Donovan Josué Quiroz Flores, con nombre comercial Bazar de SITOS, cuyo giro comercial es el sector de ropa infantil para el hogar, y con domicilio ubicado en: Divina Comedia #147, col. Eva Samano de Lopéz Mateos, Alc. Iztapalapa, CP. 09350 es responsable del tratamiento de los datos personales que recabe a través de su tienda virtual y medios digitales.</p>
+        <p>Para cualquier consulta relacionada con el tratamiento de sus datos personales, dudas sobre sus pedidos, o ejercicio de derechos, ponemos a su disposición los siguientes medios de contacto:</p>
+        <ul>
+          <li>Correo electrónico: bazarositos9@gmail.com</li>
+          <li>Teléfono / WhatsApp: 55 29 95 42 35</li>
+          <li>Redes sociales oficiales: Facebook: Bazar de Ositos</li>
+        </ul>
+
+        <h3>2. Datos personales que se recaban</h3>
+        <p>Para gestionar las compras, brindar atención a los clientes y coordinar los servicios en idioma español, Bazar de Ositos podrá recabar los siguientes datos personales:</p>
+        <ul>
+          <li>Nombre y apellidos.</li>
+          <li>Correo electrónico.</li>
+          <li>Número telefónico.</li>
+          <li>Domicilio de entrega (para pedidos coordinados de manera local).</li>
+          <li>Datos relacionados con los pedidos y las compras realizadas (incluyendo las características de los bienes o productos solicitados, el monto total a pagar en moneda nacional MXN, y la información sobre la forma de pago elegida: PayPal, tarjetas de débito o pedidos vía WhatsApp con entrega a domicilio y pago en efectivo).</li>
+          <li>Información necesaria para atender solicitudes, aclaraciones, cancelaciones, cambios o devoluciones.</li>
+        </ul>
+        <p><strong>Nota sobre pagos:</strong> Los datos bancarios o de tarjetas de pago procesados mediante plataforma digital son tratados directamente por el proveedor de pagos correspondiente (PayPal). La tienda no almacena ni protege directamente datos bancarios sensibles en sus servidores locales. Bazar de Ositos no solicita datos personales sensibles para las finalidades descritas.</p>
+
+        <h3>3. Finalidades del tratamiento de los datos personales</h3>
+        <p>Los datos personales recabados se utilizarán para las siguientes finalidades primarias y necesarias para atender la relación comercial:</p>
+        <ul>
+          <li>Registrar y gestionar los pedidos de alimentos y bebidas.</li>
+          <li>Procesar las compras y coordinar los pagos mediante los medios habilitados (PayPal, tarjetas de débito o efectivo en entregas por WhatsApp).</li>
+          <li>Preparar los productos adquiridos conforme a las características solicitadas.</li>
+          <li>Enviar confirmaciones y notificaciones sobre los pedidos.</li>
+          <li>Atender dudas, aclaraciones, reclamaciones, cancelaciones, cambios y devoluciones.</li>
+          <li>Cumplir las obligaciones legales aplicables a las operaciones comerciales y de consumo dictadas por la PROFECO.</li>
+        </ul>
+        <p><strong>Finalidades secundarias (Permiso para recibir publicidad):</strong> Adicionalmente, con su consentimiento, podremos utilizar sus datos de contacto para enviarle promociones, ofertas, novedades y publicidad sobre nuestros productos y menús especiales. La persona titular podrá manifestar en todo momento su negativa a recibir publicidad o revocar su permiso enviando un mensaje al correo bazarositos9@gmail.com o directamente mediante el mecanismo de baja habilitado en nuestros canales de contacto.</p>
+
+        <h3>4. Opciones y medios para limitar el uso o divulgación de los datos</h3>
+        <p>Las personas titulares podrán solicitar en cualquier momento que sus datos no se utilicen para finalidades publicitarias o promocionales, o bien limitar su divulgación, enviando una solicitud formal al correo electrónico bazarositos9@gmail.com . Su petición será atendida conforme a las disposiciones legales aplicables.</p>
+
+        <h3>5. Transferencias de datos personales</h3>
+        <p>Los datos personales podrán comunicarse a terceros únicamente cuando resulte estrictamente necesario para las operaciones de la tienda y la entrega del servicio, tales como:</p>
+        <ul>
+          <li>Proveedores de servicios tecnológicos y plataformas de pago (como PayPal o procesadores de tarjetas) para validar las transacciones en moneda nacional MXN.</li>
+          <li><strong>Nota sobre envíos:</strong> Cabe destacar que Bazar de Ositos no realiza envíos a domicilio masivos a través de plataformas web automatizadas de paquetería; la logística de entrega a domicilio se coordina de manera directa e interna únicamente vía WhatsApp, por lo que no se transfieren datos de domicilio a terceras empresas de mensajería externa, salvo requerimiento legal.</li>
+        </ul>
+
+        <h3>6. Derechos ARCO y procedimiento para ejercerlos</h3>
+        <p>La persona titular de los datos tiene derecho a conocer qué datos personales tenemos de su persona, para qué los utilizamos y las condiciones del tratamiento (Acceso); asimismo, es su derecho solicitar la corrección de su información personal en caso de estar desactualizada, ser inexacta o incompleta (Rectificación); que la eliminemos de nuestros registros o bases de datos cuando considere que la misma no está siendo utilizada conforme a los principios, deberes y obligaciones previstas en la normativa (Cancelación); así como oponerse al uso de sus datos personales para fines específicos (Oposición).</p>
+        <p>Para ejercer estos derechos ARCO, la persona titular deberá enviar una solicitud clara y por escrito al correo electrónico bazarositos9@gmail.com , indicando:</p>
+        <ul>
+          <li>Nombre completo del titular.</li>
+          <li>Medio de contacto (correo o teléfono) para recibir la respuesta.</li>
+          <li>Descripción clara y precisa de los datos personales respecto de los cuales busca ejercer alguno de los derechos, y el derecho que desea ejercer.</li>
+        </ul>
+        <p>La tienda comunicará los requisitos adicionales en caso de ser necesarios y atenderá su solicitud dentro de los plazos legales establecidos por la legislación vigente en México.</p>
+
+        <h3>7. Medidas de seguridad</h3>
+        <p>Donovan Josué Quiroz Flores implementará medidas de seguridad administrativas, técnicas y físicas adecuadas para proteger los datos personales de Bazar de Ositos contra daño, pérdida, alteración, destrucción o el uso, acceso y tratamiento no autorizado, tales como controles de acceso interno, contraseñas seguras y protocolos de protección de información.</p>
+
+        <h3>8. Cambios al aviso de privacidad</h3>
+        <p>El presente aviso de privacidad podrá sufrir modificaciones, cambios o actualizaciones derivadas de nuevos requerimientos legales, de nuestras propias necesidades comerciales por el crecimiento del negocio, de nuestras prácticas de privacidad o por otras causas. Cualquier modificación será informada y puesta a disposición a través de nuestros canales oficiales y sitio web.</p>
+
+        <p><strong>Responsable del aviso:</strong> Quiroz Flores Donovan Josue<br>
+        <strong>Correo electrónico:</strong> bazarositos9@gmail.com<br>
+        <strong>Teléfono de contacto / WhatsApp:</strong> 55 29 95 42 35<br>
+        <strong>Domicilio en México:</strong> Divina Comedia #147, col. Eva Samano de Lopéz Mateos, Alc. Iztapalapa</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Términos y condiciones -->
+  <div id="modal-terminos" class="info-modal-overlay">
+    <div class="info-modal-content">
+      <div class="info-modal-header">
+        <div class="info-modal-title">
+          <svg class="info-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+          </svg>
+          <h2>Términos y condiciones</h2>
+        </div>
+        <button class="close-info-modal">×</button>
+      </div>
+      <div class="info-modal-body">
+        <p class="modal-doc-title"><strong>TÉRMINOS Y CONDICIONES DE USO Y VENTA</strong></p>
+        <p><strong>Bazar de Ositos</strong> — Tienda virtual de alimentos y bebidas saludables.<br>
+        <strong>Última fecha de revisión:</strong> 13 de noviembre de 2026.</p>
+
+        <h3>1. Aceptación de los Términos</h3>
+        <p>El acceso y uso del sitio web de Bazar de Ositos (operado por Donovan Josué Quiroz Flores, con domicilio en Divina Comedia, col. Eva Samano de Lopéz Mateos, alc. Iztapalapa) implica la aceptación plena y sin reservas de los presentes Términos y Condiciones. Si no está de acuerdo con ellos, le sugerimos no utilizar la plataforma ni realizar pedidos en línea.</p>
+
+        <h3>2. Productos y Disponibilidad</h3>
+        <p>Bazar de Ositos ofrece a través de hacer su tienda virtual la venta de ropa comoda para los más pequeños del hogar, proporcionando look´s modernos y esteticos. Todos los productos están sujetos a la disponibilidad de stoock disponibles al momento de hacer la compra en el día. Nos reservamos el derecho de modificar o descontinuar cualquier producto del catalogo sin previo aviso.</p>
+
+        <h3>3. Precios y Moneda</h3>
+        <ul>
+          <li>Todos los precios publicados en la tienda virtual se encuentran expresados en Pesos Mexicanos (MXN) e incluyen los impuestos aplicables.</li>
+          <li>El monto total a pagar por el cliente dependerá de los productos seleccionados y agregados a su canasta de compra.</li>
+          <li>Nos reservamos el derecho de modificar los precios de los platillos en cualquier momento, garantizando que el cobro aplicará sobre el precio vigente al momento de confirmar su orden.</li>
+        </ul>
+
+        <h3>4. Formas de Pago</h3>
+        <p>Para su comodidad, Bazar de Ositos habilita las siguientes formas de pago:</p>
+        <ul>
+          <li><strong>Plataforma digital:</strong> Pagos en línea mediante PayPal.</li>
+          <li><strong>Pedidos vía WhatsApp:</strong> Coordinación directa con el cliente, permitiendo el pago en efectivo contra entrega en alguna estación del metro de la Ciudad de México (aplicable únicamente bajo esta modalidad de entrega coordinada localmente).</li>
+        </ul>
+
+        <h3>5. Envíos y Métodos de Entrega</h3>
+        <ul>
+          <li>No realizamos envíos masivos automatizados a través de paqueterías externas mediante la plataforma web.</li>
+          <li>La logística de entrega a domicilio o la coordinación de pedidos se realiza de manera directa y personalizada únicamente vía WhatsApp (55 29 95 42 35). Al realizar su compra, se validarán las zonas de cobertura y los tiempos estimados de entrega local.</li>
+        </ul>
+
+        <h3>6. Cancelaciones, Cambios y Devoluciones</h3>
+        <ul>
+          <li><strong>Cancelaciones:</strong> Solo se aceptarán cancelaciones de pedidos si estas se solicitan a través de nuestro canal de WhatsApp con una vigencia de hasta 5 dias habiles al momento de realizar el pedido.</li>
+          <li><strong>Cambios o devoluciones:</strong> En caso de que exista un error en el contenido de su pedido imputable a nuestro servicio, el cliente deberá reportarlo inmediatamente al recibirlo a través del teléfono 55 29 95 42 35 para evaluar la reposición o aclaración correspondiente.</li>
+        </ul>
+
+        <h3>7. Propiedad Intelectual</h3>
+        <p>Todo el contenido visual, logotipos, imágenes de productos, textos y diseño web de Bazar de Ositos son propiedad exclusiva de Donovan Josue Quiroz Flores y están protegidos por las leyes de propiedad intelectual. Queda prohibida su reproducción total o parcial sin autorización previa.</p>
+
+        <h3>8. Modificaciones a los Términos</h3>
+        <p>Bazar de ositos se reserva el derecho de modificar, actualizar o cambiar estos Términos y Condiciones en cualquier momento para adaptarlos a nuevas disposiciones legales o necesidades operativas. Las modificaciones entrarán en vigor a partir de su publicación en este sitio web.</p>
+
+        <p><strong>Contacto oficial:</strong><br>
+        - Responsable: Quiroz Flores Donovan Josue<br>
+        - Correo electrónico: bazarositos9@gmail.com<br>
+        - Teléfono / WhatsApp: 55 29 95 42 35<br>
+        - Domicilio: Divina Comedia #147, col. Eva Samano de Lopéz Mateos, Alc. Iztapalapa</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
